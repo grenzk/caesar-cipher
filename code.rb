@@ -3,7 +3,7 @@ require 'pry-byebug'
 def caesar_cipher(text, shift_factor)
   characters = text.chars
   ciphered_letters = []
-  # binding.pry
+
   characters.each_index do |index|
     character = characters[index]
     case character
