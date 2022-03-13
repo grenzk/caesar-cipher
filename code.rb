@@ -6,6 +6,7 @@ def caesar_cipher(text, shift_factor)
 
   characters.each_index do |index|
     character = characters[index]
+
     case character
     when 'a'..'z'
       letters = (character..'z').to_a + ('a'..'z').to_a
