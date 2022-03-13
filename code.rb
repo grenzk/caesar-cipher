@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'pry-byebug'
 
 def caesar_cipher(text, shift_factor)
