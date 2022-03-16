@@ -4,25 +4,26 @@ require 'pry-byebug'
 
 def caesar_cipher(text, shift_factor)
   characters = text.chars
-  ciphered_letters = []
+  encoded_characters = []
 
   characters.each_index do |index|
     character = characters[index]
-    encode(character, ciphered_letters, shift_factor)
+
+    encode_each_character(character, encoded_characters, shift_factor)
   end
-  ciphered_letters.join
+  encoded_characters.join
 end
 
-def encode(character, ciphered_letters, shift_factor)
+def encode_each_character(character, encoded_characters, shift_factor)
   case character
   when 'a'..'z'
     letters = (character..'z').to_a + ('a'..'z').to_a
-    ciphered_letters << letters[shift_factor]
+    encoded_characters << letters[shift_factor]
   when 'A'..'Z'
     letters = (character..'Z').to_a + ('A'..'Z').to_a
-    ciphered_letters << letters[shift_factor]
+    encoded_characters << letters[shift_factor]
   else
-    ciphered_letters << character
+    encoded_characters << character
   end
 end
 
