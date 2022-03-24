@@ -9,12 +9,12 @@ def caesar_cipher(text, shift_factor)
   characters.each_index do |index|
     character = characters[index]
 
-    encode_each_character(character, encoded_characters, shift_factor)
+    encode(character, encoded_characters, shift_factor)
   end
   encoded_characters.join
 end
 
-def encode_each_character(character, encoded_characters, shift_factor)
+def encode(character, encoded_characters, shift_factor)
   case character
   when 'a'..'z'
     letters = (character..'z').to_a + ('a'..'z').to_a
