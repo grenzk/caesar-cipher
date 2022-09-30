@@ -6,8 +6,8 @@ def caesar_cipher(text, shift_factor)
   characters = text.chars
   encoded_characters = []
 
-  characters.each_index do |index|
-    character = characters[index]
+  characters.each_index do |idx|
+    character = characters[idx]
 
     encode(character, encoded_characters, shift_factor)
   end
